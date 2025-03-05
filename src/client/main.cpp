@@ -194,7 +194,7 @@ void doRegResponse(json &responsejs)
 // 处理登录的响应逻辑
 void doLoginResponse(json &responsejs)
 {
-    cout << "doLoginResponse" << endl;
+    // cout << "doLoginResponse" << endl;
     if (0 != responsejs["errno"].get<int>()) // 登录失败
     {
         cerr << responsejs["errmsg"] << endl;
@@ -206,7 +206,7 @@ void doLoginResponse(json &responsejs)
         g_currentUser.setId(responsejs["id"].get<int>());
         g_currentUser.setName(responsejs["name"]);
 
-        cout << "friends" << endl;
+        // cout << "friends" << endl;
         // 记录当前用户的好友列表信息
         if (responsejs.contains("friends"))
         {
@@ -225,7 +225,7 @@ void doLoginResponse(json &responsejs)
             }
         }
 
-        cout << "groups" << endl;
+        // cout << "groups" << endl;
         // 记录当前用户的群组列表信息
         if (responsejs.contains("groups"))
         {
@@ -260,7 +260,7 @@ void doLoginResponse(json &responsejs)
         // 显示登录用户的基本信息
         showCurrentUserData();
 
-        cout << "offlinemsg" << endl;
+        // cout << "offlinemsg" << endl;
         // 显示当前用户的离线消息  个人聊天信息或者群组消息
         if (responsejs.contains("offlinemsg"))
         {
