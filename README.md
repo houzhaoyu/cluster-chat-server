@@ -7,7 +7,8 @@
 
 表结构:
 
-![image-20250405225341669](C:\Users\侯照宇\AppData\Roaming\Typora\typora-user-images\image-20250405225341669.png)
+![image-20250405225341669](https://github.com/user-attachments/assets/35df1395-f545-48be-9372-af77d12b9f24)
+
 
 ### nginx的tcp负载均衡模块
 
@@ -66,13 +67,15 @@ make
   - 修改配置文件：/usr/local/nginx/conf/nginx.conf
   - 启动nginx：./nginx（运行时重新加载配置文件：./nginx -s reload）
   - 查看是否启动成功：sudo netstat -tanp
-  - ![image-20250405230837383](C:\Users\侯照宇\AppData\Roaming\Typora\typora-user-images\image-20250405230837383.png)
-  - ![image-20250405230859659](C:\Users\侯照宇\AppData\Roaming\Typora\typora-user-images\image-20250405230859659.png)
+![image](https://github.com/user-attachments/assets/1c682b3a-0fa7-480e-ab12-23582c177713)
+
 
 - 启动redis
   - 安装：sudo apt-get install redis-server  
   - redis安装后会自动启动
-  - 查看是否启动：ps -ef | grep redis![image-20250405230717758](C:\Users\侯照宇\AppData\Roaming\Typora\typora-user-images\image-20250405230717758.png)
+  - 查看是否启动：ps -ef | grep redis
+  - ![image](https://github.com/user-attachments/assets/10d3e8f9-32c0-43a9-a6b6-94eddcdd106b)
+
 
 
 
@@ -89,4 +92,4 @@ make
 
 客户端连接8000端口，nginx会通过负载均衡算法将客户端连接到其中一个端口
 
-![image-20250405231137935](C:\Users\侯照宇\AppData\Roaming\Typora\typora-user-images\image-20250405231137935.png)
+![image](https://github.com/user-attachments/assets/8d14ab24-ea49-4ff9-b2f4-3bc71553e1c6)
